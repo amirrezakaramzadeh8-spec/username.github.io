@@ -3,466 +3,208 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>BMW M5 F10 — معرفی حرفه‌ای با جلوه‌های AI</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>BMW M5 (2011) — نگاه جامع (خلاصه‌شده)</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
 <style>
   :root{
-    --bg:#05060a;
-    --card:#0f1720;
-    --accent:#ffbb00;
-    --muted:#9aa4b2;
-    --glass: rgba(255,255,255,0.04);
+    --bg:#05060a; --card:#0f1720; --accent:#ffbb00; --muted:#9aa4b2; --glass: rgba(255,255,255,0.04);
   }
   *{box-sizing:border-box}
   body{
-    margin:0;
-    font-family:"Roboto",system-ui,-apple-system;
-    background: linear-gradient(180deg,var(--bg) 0%, #071127 60%);
-    color:#e6eef8;
+    margin:0; font-family:"Roboto",sans-serif; background:linear-gradient(180deg,#05060a,#071127); color:#eaf5ff;
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
   }
+  a{ color:var(--accent); text-decoration:none }
+  header{
+    min-height:56vh; display:flex; align-items:center; justify-content:center; text-align:center;
+    background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://www.bmw-m.com/content/dam/bmw/marketBMW_com/bmw_m_com/m5/m5_f10/2011/BMW-M5-F10-White-Front-1920x1080.jpg') center/cover no-repeat;
+    padding:36px;
+  }
+  header .box{ background:rgba(10,12,15,0.4); padding:28px; border-radius:12px; max-width:980px; }
+  header h1{ margin:0; font-size:clamp(24px, 4vw, 44px) }
+  header p.lead{ color:var(--muted); margin-top:10px; font-size:15px }
 
-  header.hero{
-    min-height:84vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 20px;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://www.bmwblog.com/wp-content/uploads/2015/09/bmw-m5-f10-white-1900x1200.jpg');
-    background-size:cover;
-    background-position:center;
-    position:relative;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-  }
-  header.hero .inner{
-    max-width:1100px;
-    z-index:2;
-    padding:30px;
-    background: linear-gradient(90deg, rgba(10,12,15,0.35), rgba(10,12,15,0.1));
-    border-radius:12px;
-    backdrop-filter: blur(6px);
-  }
-  header h1{
-    font-size: clamp(28px,5vw,48px);
-    margin:0 0 10px;
-    letter-spacing:0.6px;
-    text-shadow: 0 6px 24px rgba(0,0,0,0.6);
-  }
-  header p.lead{
-    color:var(--muted);
-    margin:0 0 18px;
-    font-size:clamp(14px,2.2vw,18px);
-  }
-  .cta{
-    display:inline-flex;
-    gap:10px;
-    margin-top:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-  .btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#06101a;
-    padding:10px 16px;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    box-shadow:0 8px 30px rgba(0,0,0,0.5);
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-  .btn:hover{ transform: translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,0.6) }
+  main{ max-width:1100px; margin:-60px auto 80px; padding:0 18px; }
 
-  main{ max-width:1200px; margin:40px auto; padding:0 18px 80px; }
+  .grid{ display:grid; grid-template-columns: repeat(12,1fr); gap:20px; }
 
-  .grid{
-    display:grid;
-    gap:24px;
-    grid-template-columns: repeat(12,1fr);
-  }
-  .card{
-    background:var(--card);
-    border-radius:12px;
-    padding:18px;
-    box-shadow: 0 8px 40px rgba(2,6,23,0.6);
-    border:1px solid rgba(255,255,255,0.02);
-  }
+  .card{ background:var(--card); border-radius:12px; padding:18px; box-shadow:0 10px 40px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.02); }
 
-  /* SPEC & GALLERY area */
-  .specs{ grid-column: span 5; display:flex; flex-direction:column; gap:14px; }
-  .gallery{ grid-column: span 7; display:flex; flex-direction:column; gap:12px; }
+  .intro{ grid-column: span 12; text-align:right; direction:rtl; }
 
-  .specs h2, .gallery h2{ margin:0 0 6px; font-size:20px; color:#fff; }
-  .spec-list{ list-style:none; padding:0; margin:0; color:var(--muted); font-size:15px; }
-  .spec-list li{ padding:8px 0; border-bottom:1px dashed rgba(255,255,255,0.03) }
+  .specs{ grid-column: span 4; }
+  .gallery{ grid-column: span 8; }
 
-  /* counters */
-  .counters{ display:flex; gap:12px; margin-top:8px; }
-  .counter{
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    padding:12px; border-radius:10px; flex:1; text-align:center;
-  }
-  .counter .num{ font-size:20px; font-weight:700; color:var(--accent) }
-  .counter .lbl{ color:var(--muted); font-size:13px }
+  h2{ margin:0 0 10px; color:#fff; font-size:20px }
+  p, li{ color:var(--muted); line-height:1.7 }
 
-  /* images */
-  .img-row{ display:grid; grid-template-columns: repeat(3,1fr); gap:10px; }
-  .img-row img{ width:100%; height:160px; object-fit:cover; border-radius:8px; cursor:pointer; transition: transform .3s ease; }
-  .img-row img:hover{ transform: scale(1.03) }
+  ul.spec-list{ list-style:none; padding:0; margin:0 }
+  ul.spec-list li{ padding:8px 0; border-bottom:1px dashed rgba(255,255,255,0.03) }
 
-  /* details area */
-  .details{ margin-top:22px; grid-column:1/-1; display:grid; grid-template-columns: 1fr 380px; gap:18px; align-items:start; }
-  .article{ padding-right:6px }
-  .article h3{ margin:0 0 8px; }
-  .article p{ color:var(--muted) }
+  .counters{ display:flex; gap:10px; margin-top:12px; }
+  .counter{ flex:1; text-align:center; padding:10px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent) }
+  .counter .num{ font-weight:700; color:var(--accent); font-size:20px }
 
-  /* right column (AI & chart) */
-  .ai-box{ position:sticky; top:92px; padding:12px; border-radius:10px; background: linear-gradient(180deg,#071428, #071421); border:1px solid rgba(255,255,255,0.02) }
-  .ai-actions{ display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
-  .small-btn{ background:transparent; color:var(--accent); border:1px solid rgba(255,255,255,0.04); padding:8px 10px; border-radius:8px; cursor:pointer }
+  .img-row{ display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:12px }
+  .img-row img{ width:100%; height:180px; object-fit:cover; border-radius:8px; cursor:pointer; transition: transform .25s ease; }
+  .img-row img:hover{ transform:scale(1.03) }
+
+  .details{ grid-column:1/-1; display:grid; grid-template-columns: 1fr 360px; gap:16px; margin-top:18px }
+  .article{ padding-right:6px; direction:rtl; text-align:justify }
+  .ai-box{ position:sticky; top:88px; padding:12px; border-radius:8px; background:linear-gradient(180deg,#071428,#071421); border:1px solid rgba(255,255,255,0.02) }
+
+  .small-btn{ display:inline-block; padding:8px 10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--accent); cursor:pointer; margin:6px 6px 0 0 }
   .output{ margin-top:12px; background:var(--glass); padding:12px; border-radius:8px; min-height:80px; color:#dff0ff; font-size:14px; white-space:pre-wrap }
 
-  /* performance chart */
-  canvas{ width:100%; display:block; border-radius:8px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); }
-
-  /* compare table */
-  table{ width:100%; border-collapse:collapse; color:var(--muted); font-size:14px; margin-top:12px }
-  th, td{ padding:8px 10px; border-bottom:1px dashed rgba(255,255,255,0.03); text-align:left }
-  th{ color:#fff; background: linear-gradient(90deg, rgba(255,255,255,0.02), transparent); border-top-left-radius:8px; }
-
   /* lightbox */
-  .lightbox{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(4,8,15,0.85); z-index:9999 }
-  .lightbox img{ max-width:92%; max-height:88%; border-radius:10px; box-shadow:0 20px 60px rgba(0,0,0,0.8) }
-  .close-light{ position:absolute; top:22px; right:26px; color:#fff; background:transparent; border:0; font-size:26px; cursor:pointer }
+  .lightbox{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(4,8,15,0.9); z-index:9999 }
+  .lightbox img{ max-width:94%; max-height:86%; border-radius:8px }
+  .close-light{ position:absolute; top:20px; right:22px; color:#fff; background:transparent; border:0; font-size:26px; cursor:pointer }
+
+  footer{ text-align:center; color:var(--muted); margin-top:30px; padding:22px 10px }
 
   /* responsiveness */
   @media (max-width:1000px){
-    .specs{ grid-column:1/-1 }
-    .gallery{ grid-column:1/-1 }
-    .details{ grid-template-columns:1fr }
-    .ai-box{ position:static; }
-    .img-row{ grid-template-columns: repeat(2,1fr) }
+    .specs{ grid-column:1/-1 } .gallery{ grid-column:1/-1 } .details{ grid-template-columns:1fr } .img-row{ grid-template-columns:repeat(2,1fr) } .ai-box{ position:static }
   }
   @media (max-width:600px){
-    header.hero{ padding:24px 10px }
-    .img-row img{ height:120px }
-    .img-row{ grid-template-columns: repeat(1,1fr) }
+    .img-row img{ height:130px } header{ min-height:46vh }
   }
 
-  /* scroll reveal */
-  .reveal{ opacity:0; transform: translateY(30px); transition: all 700ms cubic-bezier(.2,.9,.3,1) }
-  .reveal.show{ opacity:1; transform: translateY(0) }
+  /* reveal */
+  .reveal{ opacity:0; transform:translateY(20px); transition: all 700ms cubic-bezier(.2,.9,.3,1) }
+  .reveal.show{ opacity:1; transform:translateY(0) }
 
-  /* typing animation */
-  .typed{ display:inline-block; border-right:2px solid rgba(255,255,255,0.12); padding-right:6px; animation: blink .8s infinite step-end; }
-  @keyframes blink{ 50%{ border-color:transparent } }
+  /* typing */
+  .typed{ border-right:2px solid rgba(255,255,255,0.12); padding-right:6px; animation:blink .8s infinite step-end }
+  @keyframes blink{50%{ border-color:transparent } }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="inner">
-    <h1>BMW M5 F10 — افسانهٔ سدان‌های اسپرت</h1>
-    <p class="lead">موتور V8 تویین توربو، طراحی کلاسیک آلمانی و تکنولوژی روز؛ این صفحه با جلوه‌های هوش مصنوعی و انیمیشن ساخته شده تا قدرت و دقت را نشان دهد.</p>
-    <div class="cta">
-      <a class="btn" href="#gallery">گالری HD</a>
-      <a class="btn" href="#ai">نسخهٔ AI</a>
-    </div>
+<header>
+  <div class="box">
+    <h1>BMW M5 — نسخهٔ ۲۰۱1 (F10) — خلاصهٔ بازنویسی‌شده</h1>
+    <p class="lead">خلاصه و بازنویسی مطالب مرجع: برای اطلاعات دقیق و اصل، صفحهٔ رسمی BMW M را ببینید — <a href="https://www.bmw-m.com/en/topics/magazine-article-pool/the-bmw-m5-of-2011.html" target="_blank" rel="noopener">لینک مرجع (BMW M)</a></p>
   </div>
 </header>
 
 <main>
   <div class="grid">
+    <section class="intro card reveal" id="intro" style="grid-column:1/-1">
+      <h2>چرا M5 F10 مهم است؟</h2>
+      <p>بی‌ام‌و M5 مدل F10 در سال ۲۰۱۱ وارد بازار شد و نشان داد چگونه می‌توان یک سدان چهاردر را به سطح سوپراسپرت نزدیک کرد: ترکیب یک پیشرانهٔ پرقدرت، فن‌آوری‌های M و راحتی روزمره. این صفحه نکات کلیدی، مشخصات فنی و اهمیت طراحی و مهندسی آن را به صورت خلاصه و خوانا بازنویسی می‌کند.</p>
+    </section>
 
-    <div class="specs card reveal" id="specs">
+    <aside class="specs card reveal">
       <h2>مشخصات کلیدی</h2>
       <ul class="spec-list">
-        <li><strong>موتور:</strong> 4.4L V8 Twin-turbo (S63)</li>
-        <li><strong>قدرت:</strong> 560 اسب بخار (نسخه Competition تا 600 اسب)</li>
-        <li><strong>گشتاور:</strong> 680 نیوتن‌متر</li>
-        <li><strong>گیربکس:</strong> 7 سرعته دوکلاچه M-DCT / اتوماتیک</li>
-        <li><strong>شتاب 0-100:</strong> ~4.1 ثانیه</li>
-        <li><strong>سرعت نهایی:</strong> 250-305 کیلومتر/ساعت (بسته به پکیج)</li>
-        <li><strong>وزن:</strong> حدود 1850 کیلوگرم</li>
+        <li><strong>موتور:</strong> 4.4 لیتر V8 تویین‌توربو (S63)</li>
+        <li><strong>قدرت:</strong> حدود 560 اسب بخار</li>
+        <li><strong>گشتاور:</strong> ~680 نیوتن‌متر</li>
+        <li><strong>شتاب 0-100:</strong> نزدیک به 4.1 ثانیه</li>
+        <li><strong>گیربکس:</strong> M-DCT یا اتوماتیک M</li>
+        <li><strong>دوره تولید:</strong> اوایل دههٔ ۲۰۱۰</li>
       </ul>
 
-      <div class="counters" style="margin-top:12px">
-        <div class="counter">
-          <div class="num" data-target="560">0</div>
-          <div class="lbl">اسب بخار</div>
-        </div>
-        <div class="counter">
-          <div class="num" data-target="680">0</div>
-          <div class="lbl">نیوتن‌متر</div>
-        </div>
-        <div class="counter">
-          <div class="num" data-target="4.1">0</div>
-          <div class="lbl">شتاب 0-100 (ثانیه)</div>
-        </div>
+      <div class="counters">
+        <div class="counter"><div class="num" data-target="560">0</div><div class="lbl">اسب بخار</div></div>
+        <div class="counter"><div class="num" data-target="680">0</div><div class="lbl">نیوتون‌متر</div></div>
+        <div class="counter"><div class="num" data-target="4.1">0</div><div class="lbl">0-100 (ثانیه)</div></div>
       </div>
+    </aside>
 
-      <div style="margin-top:12px; color:var(--muted); font-size:13px">
-        <strong>سال تولید:</strong> 2011–2016 &nbsp; · &nbsp; <strong>کاربرد:</strong> سدان اسپرت لوکس
-      </div>
-    </div>
-
-    <div class="gallery card reveal" id="gallery">
-      <h2>گالری تصاویر (HD)</h2>
+    <section class="gallery card reveal">
+      <h2 id="gallery">گالری تصاویر — کیفیت بالا</h2>
       <div class="img-row">
-        <img data-src="https://www.bmwblog.com/wp-content/uploads/2015/09/bmw-m5-f10-white-1900x1200.jpg" alt="BMW M5 F10 Front" loading="lazy">
-        <img data-src="https://cdn.carbuzz.com/gallery-images/1600/698000/100/698140.jpg" alt="BMW M5 F10 Side" loading="lazy">
-        <img data-src="https://cdn.bmwblog.com/wp-content/uploads/2013/02/bmw-m5-f10-interior.jpg" alt="Interior" loading="lazy">
+        <img data-src="https://www.bmw-m.com/content/dam/bmw/marketBMW_com/bmw_m_com/m5/m5_f10/2011/BMW-M5-F10-White-Front-1920x1080.jpg" alt="BMW M5 F10 Front">
+        <img data-src="https://cdn.carbuzz.com/gallery-images/1600/698000/100/698140.jpg" alt="BMW M5 F10 Side">
+        <img data-src="https://cdn.bmwblog.com/wp-content/uploads/2013/02/bmw-m5-f10-interior.jpg" alt="BMW M5 Interior">
       </div>
+      <p style="margin-top:8px; color:var(--muted)">برای مشاهدهٔ نسخهٔ بزرگ، روی تصویر کلیک کنید. (تصاویر از منابع عمومی/تحریریه‌ای گرفته شده‌اند.)</p>
+    </section>
 
-      <div style="margin-top:10px; color:var(--muted); font-size:13px">برای دیدن با کیفیت بزرگ‌تر روی عکس کلیک کن.</div>
-    </div>
-
-    <div class="details card reveal" id="details">
+    <section class="details card reveal">
       <div class="article">
-        <h3>تاریخچه و تکامل</h3>
-        <p>خط تولید M5 F10 نشان‌دهنده تکامل فلسفهٔ M است: ایجاد خودرویی که هم قابلیت استفادهٔ روزانه داشته باشد و هم در پیست بتواند رقابت کند. با استفاده از موتور S63 و تکنیک‌های نوین مهندسی، F10 تجربهٔ رانندگی را بازتعریف می‌کند.</p>
+        <h3>تاریخچه و جایگاه</h3>
+        <p>نسخهٔ F10 از خانوادهٔ M5 نشان‌دهندهٔ گذار از موتورهای تنفس طبیعی قدیمی به راهکارهای تویین‌توربو مدرن بود. هدف طراحی حفظ ذات درایو محور M و در عین حال ارائهٔ کارایی و مصرف سوخت بهینه‌تر بود.</p>
 
-        <h3 style="margin-top:18px">ویژگی‌های برجسته</h3>
-        <ul style="color:var(--muted)">
-          <li>پکیج Competition: افزایش توان و بهبود هندلینگ</li>
-          <li>سیستم تعلیق تطبیقی و ترمزهای عملکرد بالا</li>
-          <li>کابین لوکس با متریال ممتاز و تکنولوژی‌های رانندگی</li>
-        </ul>
+        <h3 style="margin-top:14px">فن‌آوری موتور و مهندسی</h3>
+        <p class="muted">موتور S63 نمونه‌ای از مهندسی مدرن است: بلوک آلیاژی، دو توربو با جریان هوای بهینه، تزریق مستقیم سوخت و مدیریت الکترونیکی دقیق که همه با هم باعث می‌شود نسبت توان به وزن و پاسخ پدال گاز در سطح بالایی قرار گیرد.</p>
 
-        <h3 style="margin-top:18px">نکات فنی عمیق‌تر</h3>
-        <p class="muted">بلوک موتور آلیاژی سبک، توربوهای دوبل با مدیریت هوشمند توربوشارژینگ، سیستم تزریق سوخت مستقیم با فشار بالا و مدیریت الکترونیک دقیق؛ ساختاری که کارایی بالا و دوام را در کنار هم می‌آورد.</p>
+        <h3 style="margin-top:14px">تجربهٔ رانندگی</h3>
+        <p>ترکیب گشتاور بالا در دورهای پایین و پاسخ سریع توربوها موجب می‌شود M5 در هر شرایطی—چه در مسیر شهری و چه در پیست—احساس قدرتمندی داشته باشد. سیستم‌های کمک رانندهٔ دقیق و شاسی تقویت‌شده به کنترل خودرو در سرعت‌های بالا کمک می‌کنند.</p>
       </div>
 
       <aside class="ai-box">
-        <strong style="color:#fff">ویژگی‌های هوش مصنوعی</strong>
-        <div style="color:var(--muted); margin-top:6px; font-size:13px">ابزارهای تولید محتوا، خلاصه‌سازی، و مقایسهٔ خودکار</div>
-
+        <strong>خلاصهٔ سریع (AI-like)</strong>
+        <div style="margin-top:8px; color:var(--muted)">ابزار خلاصه‌ساز داخلی (شبیه‌سازی‌شده)</div>
         <div class="ai-actions">
-          <button class="small-btn" onclick="generateSummary('short')">خلاصه کوتاه (AI)</button>
-          <button class="small-btn" onclick="generateSummary('technical')">خلاصه فنی (AI)</button>
-          <button class="small-btn" onclick="generateSummary('marketing')">متن تبلیغاتی (AI)</button>
-          <button class="small-btn" onclick="compareModels()">مقایسه هوشمند</button>
+          <button class="small-btn" onclick="generateSummary('short')">خلاصه کوتاه</button>
+          <button class="small-btn" onclick="generateSummary('tech')">خلاصه فنی</button>
         </div>
-
-        <div class="output" id="aiOutput">برای تولید خلاصه یا مقایسه یکی از دکمه‌ها را فشار بده.</div>
-
-        <h4 style="margin-top:12px">عملکرد (نمودار)</h4>
-        <canvas id="perfChart" height="180"></canvas>
-
-        <h4 style="margin-top:12px">مقایسه سریع</h4>
-        <table id="compTable">
-          <thead><tr><th>ویژگی</th><th>M5 F10</th><th>M3</th><th>M5 Competition</th></tr></thead>
-          <tbody>
-            <tr><td>قدرت (hp)</td><td>560</td><td>431</td><td>600</td></tr>
-            <tr><td>گشتاور (Nm)</td><td>680</td><td>550</td><td>700</td></tr>
-            <tr><td>0-100</td><td>~4.1s</td><td>4.3s</td><td>3.9s</td></tr>
-          </tbody>
-        </table>
+        <div id="aiOutput" class="output">برای تولید خلاصه یکی از دکمه‌ها را بزنید.</div>
       </aside>
-    </div>
+    </section>
 
-    <div class="card reveal" style="grid-column:1/-1">
-      <h2>جزئیات فنی کامل</h2>
-      <p style="color:var(--muted)">در این بخش جزئیات موتور، اجزای توربو، سیستم انتقال نیرو و اصلاحات پرفورمنس را به زبانی فنی و قابل فهم توضیح داده‌ایم.</p>
+    <section class="card reveal" style="grid-column:1/-1">
+      <h2>نکات برجستهٔ فنی (خلاصه)</h2>
+      <ul style="color:var(--muted)">
+        <li>سیستم توربوشارژینگ دوگانه با کنترل فشار و wastegate الکترونیکی.</li>
+        <li>مدیریت دینامیک رانندگی M با حالت‌های مختلف سواری.</li>
+        <li>انتقال نیرو دقیق و قابل تنظیم برای تعادل بین راحتی و اسپرت بودن.</li>
+      </ul>
 
-      <pre style="background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; overflow:auto; color:#d9f1ff;">
-موتور: S63 4.4L V8
-سرعت توربو: کنترل شده توسط wastegate الکترونیکی
-تزریق: مستقیم با 200+ بار فشار
-سخت‌افزار: میل‌نگهدار تعادل بالا، شاتون‌های تقویت‌شده، سیستم خنک‌کننده بزرگ‌شده
-گیربکس: M-DCT با واکنش سریع و حالت پرفورمنس
-      </pre>
-    </div>
+      <h3 style="margin-top:12px">منبع و ارجاع</h3>
+      <p style="color:var(--muted)">این صفحه بر اساس اطلاعات عمومی و تحلیل‌های معتبر، و بازنویسیِ محتوای منتشرشده در صفحهٔ رسمی BMW M و منابع تحلیلی خودرو تهیه شده است. برای مطالعهٔ نسخهٔ اصلی مقاله مراجعه کنید: <a href="https://www.bmw-m.com/en/topics/magazine-article-pool/the-bmw-m5-of-2011.html" target="_blank" rel="noopener">BMW M — The BMW M5 of 2011</a></p>
+    </section>
 
   </div>
 </main>
 
-<footer style="text-align:center; padding:28px 12px; color:var(--muted);">
-  © ساخته شده با کمک هوش مصنوعی — amirrezakaramzadeh8-spec
+<footer>
+  <div style="max-width:1100px;margin:auto;padding:12px;color:var(--muted)">
+    © بازنویسی و ارائه توسط هوش مصنوعی — منابع: BMW M (مرجع)، منابع تحلیلی خودرو
+  </div>
 </footer>
 
-<!-- Lightbox -->
+<!-- lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeLight()">
   <button class="close-light" onclick="closeLight(); event.stopPropagation()">✕</button>
   <img id="lbImg" src="" alt="Large">
 </div>
 
 <script>
-  // ---------- utility: reveal on scroll ----------
-  function onScrollReveal(){
-    document.querySelectorAll('.reveal').forEach(el=>{
-      const r = el.getBoundingClientRect();
-      if(r.top < window.innerHeight - 80){
-        el.classList.add('show');
-      }
-    });
-  }
-  window.addEventListener('scroll', onScrollReveal);
-  window.addEventListener('load', ()=>{
-    onScrollReveal();
-    startCounters();
-    lazyLoadImages();
-    drawPerfChart();
-  });
+  // reveal on scroll
+  function reveal(){ document.querySelectorAll('.reveal').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top < window.innerHeight - 80) el.classList.add('show'); }); }
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('load', ()=>{ reveal(); startCounters(); lazyLoad(); });
 
-  // ---------- counters ----------
-  function startCounters(){
-    document.querySelectorAll('.num').forEach(el=>{
-      const target = parseFloat(el.dataset.target);
-      let current = 0;
-      const step = target/100;
-      const isFloat = (String(target).indexOf('.')>=0);
-      const timer = setInterval(()=>{
-        current += step;
-        if(current >= target-0.01){
-          el.innerText = isFloat ? target.toFixed(1) : Math.round(target);
-          clearInterval(timer);
-        } else {
-          el.innerText = isFloat ? current.toFixed(1) : Math.round(current);
-        }
-      }, 12);
-    });
-  }
+  // counters
+  function startCounters(){ document.querySelectorAll('.num').forEach(el=>{ const t=parseFloat(el.dataset.target); let v=0; const step=t/100; const isF=String(t).includes('.'); const id=setInterval(()=>{ v+=step; if(v>=t-0.01){ el.innerText = isF? t.toFixed(1): Math.round(t); clearInterval(id);} else el.innerText = isF? v.toFixed(1): Math.round(v); },12); }); }
 
-  // ---------- lazy-load images & lightbox ----------
-  function lazyLoadImages(){
+  // lazy load & lightbox
+  function lazyLoad(){
     document.querySelectorAll('img[data-src]').forEach(img=>{
-      const io = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            img.src = img.dataset.src;
-            io.unobserve(img);
-            img.addEventListener('click', ()=>openLight(img.dataset.src || img.src));
-          }
-        });
-      }, {rootMargin:'100px'});
+      const io=new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ img.src = img.dataset.src; io.unobserve(img); img.addEventListener('click', ()=>openLight(img.dataset.src||img.src)); } }); },{rootMargin:'120px'});
       io.observe(img);
     });
   }
-  function openLight(src){
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lbImg');
-    lbImg.src = src;
-    lb.style.display = 'flex';
-  }
-  function closeLight(){
-    const lb = document.getElementById('lightbox');
-    lb.style.display = 'none';
-    document.getElementById('lbImg').src = '';
-  }
+  function openLight(src){ document.getElementById('lbImg').src = src; document.getElementById('lightbox').style.display='flex'; }
+  function closeLight(){ document.getElementById('lbImg').src=''; document.getElementById('lightbox').style.display='none'; }
 
-  // ---------- AI-like features (client-side simulated) ----------
-  const aiVariants = {
-    short: "M5 F10: یک سدان اسپرت لوکس با موتور 4.4 لیتری V8 تویین توربو و 560 اسب بخار. ترکیبی از قدرت خالص و راحتی روزمره که تجربهٔ رانندگی را بالا می‌برد.",
-    technical: "جزئیات فنی: موتور S63 4.4L V8 با دو توربو، تزریق مستقیم، مدیریت الکترونیک پیشرفته، گشتاور 680Nm، گیربکس M-DCT با واکنش سریع — مناسب برای رانندگی تهاجمی و استفادهٔ روزمره.",
-    marketing: "بی‌ام‌و M5 F10؛ جایی که لوکس بودن و هیجان به هم می‌رسند. از 0 تا 100 در ~4.1 ثانیه، صدای V8، و کابینی که لایق بهترین‌هاست — اکنون تجربه کنید."
+  // AI-like summaries (simulated) — بازنویسی کوتاه و فنی
+  const variants = {
+    short: "M5 F10 (2011): سدان اسپرت با موتور V8 تویین توربو، ترکیب قدرت بالا و کاربری روزانه؛ مناسب علاقمندان سرعت و راحتی.",
+    tech: "جزئیات فنی: موتور S63 4.4L V8 تویین توربو، گشتاور بالا در دورهای پایین، گیربکس M-DCT؛ سیستم تعلیق و ترمز تقویت‌شده برای رانندگی پرفورمنس."
   };
-
-  function typeText(el, text, speed=18){
-    el.innerText = "";
-    el.classList.add('typed');
-    let i=0;
-    const t = setInterval(()=>{
-      el.innerText += text.charAt(i);
-      i++;
-      if(i>=text.length){ clearInterval(t); el.classList.remove('typed'); }
-    }, speed);
+  function generateSummary(k){
+    const out = document.getElementById('aiOutput'); out.innerText = "در حال تولید خلاصه ...";
+    setTimeout(()=>{ out.innerText = ""; typeText(out, variants[k]||variants.short, 14); }, 700 + Math.random()*600);
   }
-
-  function generateSummary(kind){
-    const out = document.getElementById('aiOutput');
-    const txt = aiVariants[kind] || aiVariants.short;
-    // simulate "AI-thinking" with dot animation
-    out.innerText = "در حال ساخت خلاصه توسط هوش مصنوعی";
-    let dots = 0;
-    const loading = setInterval(()=>{
-      dots = (dots+1)%4;
-      out.innerText = "در حال ساخت خلاصه توسط هوش مصنوعی" + ".".repeat(dots);
-    }, 350);
-
-    setTimeout(()=>{
-      clearInterval(loading);
-      typeText(out, txt, 14);
-    }, 900 + Math.random()*800);
+  function typeText(el, txt, speed=16){
+    el.innerText=''; el.classList.add('typed'); let i=0; const t=setInterval(()=>{ el.innerText += txt.charAt(i); i++; if(i>=txt.length){ clearInterval(t); el.classList.remove('typed'); } }, speed);
   }
-
-  // ---------- compare models (simulated AI) ----------
-  function compareModels(){
-    const out = document.getElementById('aiOutput');
-    out.innerText = "در حال آماده‌سازی مقایسهٔ هوشمند...";
-    setTimeout(()=>{
-      const res = [
-        "✅ نتیجه‌گیری سریع: M5 F10 برای کسانی که می‌خواهند تعادل بین لوکس بودن و عملکرد بالا را داشته باشند بهترین انتخاب است.",
-        "⚙️ M5 Competition نسخهٔ قوی‌تر با تنظیمات تعلیق سفت‌تر و قدرت بیشتر است، مناسب برای پیست.",
-        "🔧 نگهداری: هزینه‌های نگهداری M5 به دلیل قطعات عملکردی بالاتر بیشتر از یک سدان معمولی است."
-      ].join("\n\n");
-      typeText(out, res, 12);
-    }, 900);
-  }
-
-  // ---------- performance chart (canvas draw) ----------
-  function drawPerfChart(){
-    const c = document.getElementById('perfChart');
-    if(!c) return;
-    const ctx = c.getContext('2d');
-    // set logical size
-    const DPR = window.devicePixelRatio || 1;
-    c.width = c.clientWidth * DPR;
-    c.height = c.clientHeight * DPR;
-    ctx.scale(DPR, DPR);
-
-    // sample data: speed vs time (0-100kph)
-    const labels = [0,1,2,3,4,5,6]; // seconds
-    const speed = [0,20,45,80,100,120,140]; // illustrative
-    const W = c.clientWidth, H = c.clientHeight;
-    ctx.clearRect(0,0,W,H);
-
-    // draw grid
-    ctx.strokeStyle = 'rgba(255,255,255,0.04)';
-    ctx.lineWidth = 1;
-    for(let i=0;i<=4;i++){
-      const y = 10 + (H-20) * (i/4);
-      ctx.beginPath(); ctx.moveTo(40,y); ctx.lineTo(W-10,y); ctx.stroke();
-    }
-
-    // axes labels
-    ctx.fillStyle = 'rgba(255,255,255,0.6)';
-    ctx.font = '12px Roboto';
-    ctx.fillText('سرعت (km/h)', 10, 14);
-    ctx.fillText('زمان (s)', W-60, H-6);
-
-    // scale data
-    const maxS = Math.max(...speed) * 1.1;
-    const plotX = (i)=> 40 + (W-60)*(i/(labels.length-1));
-    const plotY = (v)=> 10 + (H-30) * (1 - v/maxS);
-
-    // draw line
-    ctx.beginPath();
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = 'rgba(255,187,0,0.95)';
-    ctx.moveTo(plotX(0), plotY(speed[0]));
-    for(let i=1;i<labels.length;i++){
-      ctx.lineTo(plotX(i), plotY(speed[i]));
-    }
-    ctx.stroke();
-
-    // draw points
-    ctx.fillStyle = '#fff';
-    for(let i=0;i<labels.length;i++){
-      ctx.beginPath();
-      ctx.arc(plotX(i), plotY(speed[i]), 3.5, 0, Math.PI*2);
-      ctx.fill();
-    }
-  }
-
-  // ---------- small UX: show site live URL to user console ----------
-  console.log("Site loaded. If you want to edit: open index.html and modify content. Commit -> Pages deploys automatically.");
 </script>
 
 </body>
