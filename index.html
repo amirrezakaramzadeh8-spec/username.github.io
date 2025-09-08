@@ -2,10 +2,154 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=m5.html">
-  <title>BMW M5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مرسدس بنز CLS63 AMG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.7;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                  url('cls63-hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeInDown 2s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      animation: fadeInUp 2s ease;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.4s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #777;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <p>در حال انتقال به صفحه اصلی...</p>
+
+  <header>
+    <h1>مرسدس بنز CLS63 AMG</h1>
+    <p>ترکیب لوکس بودن و عملکرد یک سوپر اسپرت</p>
+  </header>
+
+  <section>
+    <h2>موتور و عملکرد</h2>
+    <p>
+      مرسدس CLS63 AMG به یک موتور V8 توئین توربو با حجم ۵.۵ لیتر مجهز است 
+      که توان تولیدی آن بیش از ۵۵۰ اسب‌بخار و گشتاور ۷۲۰ نیوتن‌متر می‌باشد.
+      این خودرو در کمتر از ۴ ثانیه از حالت سکون به سرعت ۱۰۰ کیلومتر در ساعت می‌رسد.
+    </p>
+  </section>
+
+  <section>
+    <h2>طراحی و زیبایی</h2>
+    <p>
+      CLS63 ترکیبی از خطوط نرم و کوپه‌مانند با ظاهری تهاجمی است. جلوپنجره‌ی AMG، 
+      سپر اسپرت و رینگ‌های خاص این مدل باعث می‌شوند که CLS63 AMG در هر جمعی متمایز باشد.
+    </p>
+  </section>
+
+  <section>
+    <h2>تکنولوژی و راحتی</h2>
+    <p>
+      سیستم تعلیق هوشمند، صندلی‌های چرمی اسپرت، نورپردازی داخلی و سیستم صوتی Burmester
+      تجربه‌ای لوکس در کنار هیجان رانندگی فراهم می‌کند.
+    </p>
+  </section>
+
+  <section>
+    <h2>گالری تصاویر</h2>
+    <div class="gallery">
+      <img src="cls63-1.jpg" alt="مرسدس CLS63 جلو">
+      <img src="cls63-2.jpg" alt="مرسدس CLS63 بغل">
+      <img src="cls63-3.jpg" alt="کابین مرسدس CLS63">
+      <img src="cls63-4.jpg" alt="مرسدس CLS63 در جاده">
+    </div>
+  </section>
+
+  <footer>
+    ساخته شده با ❤️ توسط هوش مصنوعی
+  </footer>
+
+  <script>
+    // انیمیشن اسکرول
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add("show");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
